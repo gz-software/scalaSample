@@ -11,14 +11,13 @@ Given the spark Dataframe as:
             ('ABC17969(AB)', '4', 'F43874', 2022),
             ('ABC17969(AB)', '5', 'MY06154', 2021),
             ('ABC17969(AB)', '6', 'MY4387', 2022),
-
             ('AE686(AE)', '7', 'AE686', 2023),
             ('AE686(AE)', '8', 'BH2740', 2021),
             ('AE686(AE)', '9', 'EG999', 2021),
             ('AE686(AE)', '10', 'AE0908', 2021),
             ('AE686(AE)', '11', 'QA402', 2022),
             ('AE686(AE)', '12', 'OM691', 2022)
-        ]
+]
 
 Schema: peer_id, id_1, id_2, year. 
 Process:
@@ -37,9 +36,9 @@ As 1(2023 count) + 2(2022 count) >= 3 (given size number), the output would be 2
 
 The final expected output for the given example would be:
 [
-('ABC17969(AB)', 2022),
-(' AE686(AE)', 2022),
-(' AE686(AE)', 2023),
+            ('ABC17969(AB)', 2022),
+            (' AE686(AE)', 2022),
+            (' AE686(AE)', 2023),
 ]
 
 
@@ -63,14 +62,14 @@ If the given number is 5, dataframe is:
 ]
 Then output would be:
 [
-('AE686(AE)',2022),
-('AE686(AE)',2021)
+            ('AE686(AE)',2022),
+            ('AE686(AE)',2021)
 ]
 
 If give number is 7, the output would be:
 [
-('AE686(AE)',2022),
-('AE686(AE)',2021),
-('AE686(AE)',2019)
+            ('AE686(AE)',2022),
+            ('AE686(AE)',2021),
+            ('AE686(AE)',2019)
 ]
 
